@@ -553,6 +553,7 @@ void parse_varDecl()
 {
     write_derivation("varDecl -> id : type arraySizeList ;");
     match(IDENTIFIER);
+    parse_inheritanceList();
     match(COLON);
     parse_type();
     parse_arraySizeList();
