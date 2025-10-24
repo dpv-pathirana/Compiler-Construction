@@ -1,0 +1,11 @@
+del *.o lex.yy.c compiler.exe
+
+flex lex_a.l
+gcc -c lex.yy.c
+gcc -c parser.c
+gcc -c ast_printer.c
+gcc -c error_logger.c
+gcc -c symbol_table.c
+gcc -c semantic.c 
+
+gcc -o compiler lex.yy.o parser.o symbol_table.o semantic.o error_logger.o ast_printer.o
